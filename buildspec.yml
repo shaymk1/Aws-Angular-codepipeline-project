@@ -10,7 +10,10 @@ phases:
       - npm install
   build:
     commands:
+      - echo error simulation
       - ng build --prod
+    finally:
+      - echo this is the final building stage!
 artifacts:
   base-directory: dist/my-angular-project
   files:
